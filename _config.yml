@@ -1,0 +1,22 @@
+# Setup
+title:               Sibylline.dev
+tagline:             Crafting AI for the human journey
+description:         We develop AI-powered applications that foster personal growth, emotional well-being, and meaningful connections.
+url:                 https://sibylline.dev
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Nathan Rice
+  url:               #
+  email:             nathan.alexander.rice@gmail.com
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: G-H63XXGRLBY
