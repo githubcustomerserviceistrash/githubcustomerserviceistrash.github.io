@@ -32,7 +32,7 @@ Rest assured, Jung does not store any of the data provided for analysis or the r
 
 ## API Description
 
-To harness the power of Jung, simply send a POST request to `/jung` with the following parameters:
+To harness the power of Jung, simply send a POST request to `https://personality-analysis.p.rapidapi.com/jung-{size}` with the following parameters:
 
 - `text` (string): The unstructured text you want to analyze, such as a character description, dialogue transcript, or any text that involves people and their actions.
 - `subcommand` (string): An optional secondary directive to refine the analysis towards a specific use case or focus.
@@ -44,6 +44,27 @@ Jung will respond with a comprehensive analysis that includes:
 - `trait_beta`: Probability distributions over likely trait values. Specified as Beta distribution parameters alpha and beta, capturing the nuance and uncertainty of personality.
 - `trait_normal`: Summary statistics (mean and standard deviation) for a normal distribution approximating the estimated beta distribution, providing an easily interpretable estimate.
 
+The size options are:
+
+|endpoint|payload limit (kb)|price|
+|jung-s|50|$0.125|
+|jung-m|150|$0.25|
+|jung-l|350|$0.50|
+|jung-xl|750|$1.00|
+
+Note that both the text and subcommand count towards this limit.
+
+The majority of these costs are related to inference and RapidAPI margins, you can plan on integrating Jung with confidence as I should be able to bring these costs down by about an order of magnitude within the next 6-9 months.
+
+### RapidAPI
+
+If you haven't used RapidAPI before, you will need to sign up for an account there in order to get headers that are required to make requests.  Here are the required headers:
+
+```text
+    "X-RapidAPI-Key": "your_rapid_api_key",
+    "X-RapidAPI-Host": "personality-analysis.p.rapidapi.com"
+```
+
 ## Example
 
 Here's an example of how to use the Jung API in Python:
@@ -51,25 +72,24 @@ Here's an example of how to use the Jung API in Python:
 ```python
 import requests
 
-url = "https://your-api-url.com/jung"
+url = "https://personality-analysis.p.rapidapi.com/jung-s"
+
 payload = {
     "text": "...", # Pretend the text of multiple interviews with Elon Musk is here for brevity.
     "subcommand": "These are transcripts of interviews with Elon Musk.  Your subcommand is to contain your analysis to the person being intervied and focus your analysis on being maximally informative to someone who might consider working for or having business dealings with him."
 }
+
 headers = {
-    "Authorization": "Bearer your-api-token"
+    "X-RapidAPI-Key": "your_rapid_api_key_here",
+    "X-RapidAPI-Host": "personality-analysis.p.rapidapi.com"
 }
 
-response = requests.post(url, json=payload, headers=headers)
+response = requests.request("POST", url, json=payload, headers=headers)
 
-if response.status_code == 200:
-    result = response.json()
-    print(result)
-else:
-    print(f"Error: {response.status_code} - {response.text}")
+print(response.text)
 ```
 
-The API will return a response similar to this (this is a made up example for fun):
+The API will return a response similar to this:
 
 ```json
 {
