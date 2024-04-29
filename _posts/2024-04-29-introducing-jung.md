@@ -21,10 +21,10 @@ With that out of the way, let's dive into the output of Jung. I've placed Biden 
 
 <table>
     <tr>
-        <td class="analysis-table" style="background-color: rgb(0, 0, 96)">
+        <td class="analysis-table" style="background-color: rgb(0, 0, 48)">
         {% include biden-analysis.html %}
         </td>
-        <td class="analysis-table" style="background-color: rgb(96, 0, 0)">
+        <td class="analysis-table" style="background-color: rgb(48, 0, 0)">
         {% include trump-analysis.html %}
         </td>
     </tr>

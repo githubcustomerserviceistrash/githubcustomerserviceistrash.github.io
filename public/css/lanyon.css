@@ -73,7 +73,7 @@ h6 {
  * Center the page content.
  */
 
-.container {  
+.container {
   max-width: 28rem;
 }
 @media (min-width: 38em) {
@@ -559,7 +559,8 @@ a.pagination-item:hover {
   font-size: 16px;
 }
 
-.analysis-table p, li {
+.analysis-table p,
+li {
   text-align: justify;
 }
 
@@ -574,4 +575,12 @@ p.moments {
 
 p.notes {
   white-space: pre-wrap;
+}
+
+td.analysis-table > h1,
+td.analysis-table > h2,
+td.analysis-table > h3,
+td.analysis-table > ul,
+td.analysis-table > p {
+  color: white;
 }

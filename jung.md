@@ -58,7 +58,7 @@ The majority of these costs are related to inference and RapidAPI margins, you c
 
 ### RapidAPI
 
-If you haven't used RapidAPI before, you will need to sign up for an account there in order to get headers that are required to make requests.  Here are the required headers:
+If you haven't used RapidAPI before, you will need to sign up for an account there in order to get headers that are required to make requests. Here are the required headers:
 
 ```text
     "X-RapidAPI-Key": "your_rapid_api_key",
@@ -76,7 +76,7 @@ url = "https://personality-analysis.p.rapidapi.com/jung-s"
 
 payload = {
     "text": "...", # Pretend the text of multiple interviews with Elon Musk is here for brevity.
-    "subcommand": "These are transcripts of interviews with Elon Musk.  Your subcommand is to contain your analysis to the person being intervied and focus your analysis on being maximally informative to someone who might consider working for or having business dealings with him."
+    "subcommand": "These are transcripts of interviews with Elon Musk.  Your subcommand is to contain your analysis to the person being interviewed and focus your analysis on being maximally informative to someone who might consider working for or having business dealings with him."
 }
 
 headers = {
@@ -142,9 +142,9 @@ Nicely formatted, the data looks like this:
 {% include musk-analysis.html %}
 </td></tr></table>
 
-Note that Jung is much more certain about some traits than others in this analysis.  I think we can all agree that Elon would score high on openness and autonomy, but his scores for extraversion and altruism are much more questionable, and that is reflected in the estimates.
+Note that Jung is much more certain about some traits than others in this analysis. I think we can all agree that Elon would score high on openness and autonomy, but his scores for extraversion and altruism are much more questionable, and that is reflected in the estimates.
 
-Because the traits are modeled using a beta distribution, if you perform an analysis on the same person multiple times, you can combine the results in a principled way just by summing the alpha and beta parameters from all the analyses.  The estimates from Jung never become stale, only growing more accurate over time as new data comes in.
+Because the traits are modeled using a beta distribution, if you perform an analysis on the same person multiple times, you can combine the results in a principled way just by summing the alpha and beta parameters from all the analyses. The estimates from Jung never become stale, only growing more accurate over time as new data comes in.
 
 ## Uncover the Depths of Personality
 
