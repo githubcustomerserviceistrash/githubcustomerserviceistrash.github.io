@@ -3,8 +3,6 @@ layout: post
 title: AI and the Human Asymptote
 ---
 
-## AI and the Human Asymptote
-
 **Thesis:** Teaching AI to reach superhuman performance will be much more challenging than we expect. Current progress has been accelerated by bootstrapping from human evolution over geological time, and as we approach the limits of our intelligence, we will have to take newer, more time consuming and difficult approaches to keep improving model intelligence.  This limit is the Human Asymptote, and it represents a fundamental challenge on our path to machine superintelligence.
 
 ### The Intelligence Bottleneck
