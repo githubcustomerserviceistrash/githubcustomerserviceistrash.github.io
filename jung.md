@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Jung Beta
+priority: 1
 ---
 
 ## Unlock the Secrets of Personality with Jung

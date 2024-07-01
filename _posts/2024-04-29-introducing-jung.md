@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducing Jung, your AI powered personality analyst!
+description: Explore the depths of personality with Jung, our new AI-powered analyst! Dive into a fascinating comparison of Donald Trump and Joe Biden through their own words, revealing hidden traits and motivators. Whether you're an undecided voter or interested in psychological insights for hiring or other fields, Jung offers a powerful tool for understanding personalities from unstructured text. Check out the full analysis and see how Jung can assist you!
 ---
 
 Hello. I'm happy to announce the beta launch of my personality profiling and analysis tool, Jung! Jung can take unstructured text and a contextual directive and help you peer into the depths of someone's psyche, extracting personality traits, subtext and hidden motivators. If you'd like to know the details of the Jung API, head over to the [API page](./jung/). For now, I'd like to focus on some fun demonstrations to give you a sense of Jung's abilities.
@@ -19,16 +20,12 @@ I want to preface this analysis by noting that I've made many attempts to contro
 
 With that out of the way, let's dive into the output of Jung. I've placed Biden and Trump side by side for easy comparison:
 
-<table>
-    <tr>
-        <td class="analysis-table" style="background-color: rgb(0, 0, 48)">
-        {% include biden-analysis.html %}
-        </td>
-        <td class="analysis-table" style="background-color: rgb(48, 0, 0)">
-        {% include trump-analysis.html %}
-        </td>
-    </tr>
-</table>
+<div class="analysis-table">
+{% include biden-analysis.html %}
+</div>
+<div class="analysis-table">
+{% include trump-analysis.html %}
+</div>
 
 Not too shabby! Jung clocks both Biden and Trump well, which isn't that useful in this case since I think everyone knows what each of the candidates are about, but it could be very useful in other circumstances such as hiring, medical support systems, criminal justice and so forth where a decision maker might lack sufficient time to make a nuanced decision considering all the evidence. With Jung's help, you can quickly gain psychological insights from large volumes of conversational text.
 
@@ -37,7 +34,7 @@ Note that the traits listed here are the [Big 5](https://en.wikipedia.org/wiki/B
 - Autonomy: the individual's independence, self-determination, and willingness to make decisions based on personal judgment. Autonomous individuals are skeptical of authority and do not care about external expectations.
 - Altruism: the individual's concern for the well-being of others, willingness to help, and tendency to prioritize the needs of others over their own. Altruistic individuals are generous, compassionate and selflessness in their actions and decisions.
 
-You might also notice the red line on the charts doesn't exactly line up with the listed mean. This is because the mean and standard deviation are from a gaussian approximation, the true underlying distribution is beta, and the charts are using the mode, which is more meaningful for beta distrbutions with skew than the average. The guassian mean and deviation are provided because they're easier to conceptualize but the beta distributions are correct.  Working with beta distributions also has the nice property that if you have Jung analyze someone more than once, you can combine the results in a principled way just by summing the alpha and beta parameters for each trait.
+You might also notice the red line on the charts doesn't exactly line up with the listed mean. This is because the mean and standard deviation are from a gaussian approximation, the true underlying distribution is beta, and the charts are using the mode, which is more meaningful for beta distrbutions with skew than the average. The guassian mean and deviation are provided because they're easier to conceptualize but the beta distributions are correct. Working with beta distributions also has the nice property that if you have Jung analyze someone more than once, you can combine the results in a principled way just by summing the alpha and beta parameters for each trait.
 
 Those of you with a background in psychometrics might be used to seeing traits on a 1-10 or 1-100 scale, and wonder why the traits are expressed in the [-1, 1] range. This is because centering the neutral value at 0 reduces scale bias caused by human (and, by extension, LLM) evaluation resulting from the skewed distributions of graded schoolwork and product reviews.
 

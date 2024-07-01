@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Artificial General Intelligence is a Red Herring
+description: Discover why Artificial General Intelligence (AGI) might be a distraction in the AI discourse. Our latest post argues that the pursuit of AGI, with its unclear definitions and daunting challenges, diverts valuable resources. Instead, we propose a task-centric approach, focusing on specialized models excelling in specific domains. Learn why optimizing individual tasks and creating a robust benchmark suite could be the true path to revolutionary AI advancements.
 ---
 
 ## Introduction

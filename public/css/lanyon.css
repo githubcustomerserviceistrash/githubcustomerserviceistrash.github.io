@@ -97,20 +97,22 @@ h6 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  background: linear-gradient(to bottom, #98cecb, #6780b7);
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  font-weight: 700;
+  color: #202020;
 }
 .masthead-title a {
-  color: #505050;
+  color: #404040;
 }
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
-  color: #c0c0c0;
+  color: #454545;
   letter-spacing: 0;
 }
 
@@ -216,8 +218,11 @@ a.sidebar-nav-item:focus {
   display: flex;
   align-items: center;
   padding: 0.25rem 0.75rem;
-  color: #505050;
-  background-color: #fff;
+  color: #202020;
+  background-color: #7f9ee1;
+  border-color: rgba(20,20,20, 0.25);
+  border-width: 1px;
+  border-style: solid;
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -575,12 +580,4 @@ p.moments {
 
 p.notes {
   white-space: pre-wrap;
-}
-
-td.analysis-table > h1,
-td.analysis-table > h2,
-td.analysis-table > h3,
-td.analysis-table > ul,
-td.analysis-table > p {
-  color: white;
 }

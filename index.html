@@ -3,35 +3,82 @@ layout: default
 title: Home
 ---
 
+<h3>Empowering Businesses with Advanced AI Solutions</h3>
+<p>
+  Welcome to Sibylline Software, where we specialize in creating innovative AI
+  tools and APIs designed to empower businesses. Our mission is to harness the
+  power of AI to enhance productivity, streamline processes, and provide deep
+  insights, all while maintaining a focus on ethical and responsible technology
+  use. Why Partner with Sibylline Software?
+  
+  <ul><li><strong>Cutting-Edge AI Technology:</strong> We
+  develop advanced AI solutions that help businesses achieve their goals through
+  enhanced capabilities and intelligent automation.</li><li><strong>User-Centric Tools:</strong>
+  Our intuitive tools and APIs are designed to integrate seamlessly into your
+  existing systems, making it easy to leverage the power of AI.</li><li>
+  <strong>Collaboration Opportunities:</strong> We are actively seeking partnerships with
+  forward-thinking businesses to co-create and innovate, driving mutual success
+  and growth. </li><li><strong>Ethical AI Empowerment:</strong> We focus on using AI to empower and
+  augment human abilities, supporting a future where technology enhances, rather
+  than replaces, human work.</li>
+  
+</ul>
+Discover how Sibylline Software can help you
+  harness the full potential of AI. Let's collaborate to create solutions that
+  drive innovation and success. Contact us to learn more and explore partnership
+  opportunities!
+</p>
+<h3>Products</h3>
+<hr />
+<div class="products">
+  <div>
+    <h4><a href="https://www.keytrustee.org">Key Trustee</a></h4>
+    Slash your AI and API expenses to zero while streamlining in-app payments.
+    Give your users the transparency and control they need over AI usage. Click
+    here to transform your application with Key Trustee!
+  </div>
+  <div>
+    <h4><a href="/jung/">Jung</a></h4>
+    Unlock the hidden depths of personality with Jung, our cutting-edge API that
+    uses advanced language models to analyze unstructured text. Whether you're
+    evaluating job candidates, exploring relationship dynamics, or enhancing
+    mental health care, Jung provides unparalleled insights personality,
+    motivations, fears, and desires.
+  </div>
+</div>
+
+<h3>Posts</h3>
+<hr />
 <div class="posts">
-  {% for post in paginator.posts %}
+  {% assign last_ten_posts = paginator.posts | slice: 0, 10 %} {% for post in
+  last_ten_posts %}
   <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+    <h4>
+      <a href="{{ post.url | absolute_url }}"> {{ post.title }} </a>
+    </h4>
+    {{ post.description }}
   </div>
   {% endfor %}
 </div>
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+  <a
+    class="pagination-item older"
+    href="{{ paginator.next_page_path | absolute_url }}"
+    >Older</a
+  >
   {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
+  <span class="pagination-item older">Older</span>
+  {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+  <a
+    class="pagination-item newer"
+    href="{{ paginator.previous_page_path | absolute_url }}"
+    >Newer</a
+  >
+  {% endif %} {% else %}
+  <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
