@@ -59,8 +59,8 @@ html {
 }
 
 body {
-  color: #515151;
-  background-color: #fff;
+  color: rgb(160, 160, 160);
+  background-color: rgb(24, 24, 24);
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -132,8 +132,8 @@ hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgb(64, 64, 64);
+  /* border-bottom: 1px solid #fff; */
 }
 
 abbr {

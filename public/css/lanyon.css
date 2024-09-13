@@ -50,7 +50,7 @@ h5,
 h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #313131;
+  color: #c5c5c5;
   letter-spacing: -0.025rem;
 }
 
@@ -97,22 +97,22 @@ h6 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  background: linear-gradient(to bottom, #98cecb, #6780b7);
-  border-bottom: 1px solid #eee;
+  background: rgba(32, 32, 32, 1);
+  border-bottom: 1px solid rgba(16, 16, 16, 0.5);
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
-  color: #202020;
+  color: #ffffff;
 }
 .masthead-title a {
-  color: #404040;
+  color: #ffffff;
 }
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
-  color: #454545;
+  color: #e3e3e3;
   letter-spacing: 0;
 }
 
@@ -219,7 +219,7 @@ a.sidebar-nav-item:focus {
   align-items: center;
   padding: 0.25rem 0.75rem;
   color: #202020;
-  background-color: #7f9ee1;
+  background-color: rgba(64, 64, 64, 1);
   border-color: rgba(20,20,20, 0.25);
   border-width: 1px;
   border-style: solid;
@@ -309,7 +309,7 @@ a.sidebar-nav-item:focus {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 /* Blog post or page title */
